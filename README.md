@@ -1,23 +1,23 @@
-# Wireless-LED-Control-Code-with-NRF
+# Wireless LED Control Code with NRF
+
+Here’s the **modified code** where pressing a switch on the **transmitter side** will make the **onboard LED (pin 13) of the receiver blink**.
 
 ![NRF](https://github.com/user-attachments/assets/f48cd1ff-5484-4823-a58d-ae16e4f568ae)
+
+The image contains the following components:
+
+1. Two NRF24L01 wireless modules (with SMA antenna connectors).
+2. Two external antennas (for NRF24L01 modules).
+3. Two Arduino Nano boards (with USB-C ports).
+4. Two NRF24L01 adapter modules (to regulate voltage and provide stable communication).
+5. A power switch.
+
+---
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9f9f3065-9689-4903-9115-2d919a661cc7" alt="Image 1" width="42%" style="margin-right: 10px;"/>
   <img src="https://github.com/user-attachments/assets/f6d41a19-6ad4-4d67-9c3e-62238c5789d3" alt="Image 2" width="56%" style="margin-right: 10px;"/>
 </p>
-
-The image contains the following components:
-
-1 Two NRF24L01 wireless modules (with SMA antenna connectors).
-2 Two external antennas (for NRF24L01 modules).
-3 Two Arduino Nano boards (with USB-C ports).
-4 Two NRF24L01 adapter modules (to regulate voltage and provide stable communication).
-5 A power switch.
-
----
-
-Here’s the **modified code** where pressing a switch on the **transmitter side** will make the **onboard LED (pin 13) of the receiver blink**.
 
 ---
 
