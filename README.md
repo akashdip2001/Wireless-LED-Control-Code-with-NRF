@@ -22,6 +22,9 @@ The image contains the following components:
 ---
 
 ### **Connections**
+
+<img align="right" alt="servo" width="40%" src="https://github.com/user-attachments/assets/afed39f7-98da-4940-bdf9-67ab0c28900f">
+
 #### **Transmitter (Arduino Nano + NRF24L01 + Switch)**
 | NRF24L01 Pin | Arduino Nano Pin |
 |-------------|----------------|
@@ -41,25 +44,12 @@ The image contains the following components:
 
 ---
 
-#### **Receiver (Arduino Nano + NRF24L01 + LED)**
-| NRF24L01 Pin | Arduino Nano Pin |
-|-------------|----------------|
-| VCC | 3.3V |
-| GND | GND |
-| CE | D9 |
-| CSN | D10 |
-| SCK | D13 |
-| MOSI | D11 |
-| MISO | D12 |
-
 **Onboard LED (Receiver Side)**
 - The built-in **LED on Arduino Nano is on pin 13**.
 
 ---
 
 ![Screenshot (257)](https://github.com/user-attachments/assets/06fa3d60-073a-44b5-9853-f4784c6fe9ee)
-![WhatsApp Image 2025-04-02 at 00 25 57_2cc4c958](https://github.com/user-attachments/assets/4e4a7240-a870-4469-95a1-8e1452d0a9c1)
-![WhatsApp Image 2025-04-02 at 00 25 57_b91891a4](https://github.com/user-attachments/assets/af37f6b3-0352-413d-9619-33d3f3d141c7)
 
 ## **Transmitter Code (Send Data on Switch Press)**
 ```cpp
@@ -92,9 +82,21 @@ void loop() {
 
 ---
 
-![WhatsApp Image 2025-04-02 at 00 26 36_aa0cef31](https://github.com/user-attachments/assets/f8355d64-f0fc-4260-b990-aa208b63ef81)
-![WhatsApp Image 2025-04-02 at 00 25 57_9359fc7d](https://github.com/user-attachments/assets/27b2d67a-1e54-4d2d-b199-6ed9f9aef664)
+#### **Receiver (Arduino Nano + NRF24L01 + LED)**
+| NRF24L01 Pin | Arduino Nano Pin |
+|-------------|----------------|
+| VCC | 3.3V |
+| GND | GND |
+| CE | D9 |
+| CSN | D10 |
+| SCK | D13 |
+| MOSI | D11 |
+| MISO | D12 |
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f8355d64-f0fc-4260-b990-aa208b63ef81" alt="Image 1" width="46%" style="margin-right: 10px;"/>
+  <img src="https://github.com/user-attachments/assets/27b2d67a-1e54-4d2d-b199-6ed9f9aef664" alt="Image 2" width="46%" style="margin-right: 10px;"/>
+</p>
 
 ## **Receiver Code (Blink Onboard LED on Signal)**
 ```cpp
