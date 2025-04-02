@@ -1,5 +1,8 @@
 # Wireless LED Control Code with NRF
 
+<details>
+  <summary style="opacity: 0.85;"><b>Old Code + connections + ✅ ARDUINO IDE setup</b></summary><br>
+  
 Here’s the **modified code** where pressing a switch on the **transmitter side** will make the **onboard LED (pin 13) of the receiver blink**.
 
 ![NRF](https://github.com/user-attachments/assets/f48cd1ff-5484-4823-a58d-ae16e4f568ae)
@@ -157,3 +160,77 @@ void loop() {
 ✔ **Power-efficient RF module settings:** Uses `RF24_PA_MIN`.  
 ✔ **No unnecessary delays in receiver** (only LED blink cycle).  
 
+</details>
+
+## Transmitter code
+
+```cpp
+#include <SPI.h>
+#include <RF24.h>
+#include <nRF24L01.h>
+
+RF24 radio(7,8);   // declaring CE and CSN pins
+const byte address[] = "node1"; 
+
+bool buttonCheck = 0;  // the value returned by digitalRead(4) is stored here
+
+void setup() {
+  radio.begin();  // initializes the operations of the chip
+  radio.openWritingPipe(address);
+  radio.setPALevel(RF24_PA_MIN);
+  radio.stopListening();    
+ 
+  pinMode(4, INPUT); // declares pushButton as an input
+
+}
+                                                                          
+
+void loop() {
+  buttonCheck = digitalRead(4);
+  radio.write(&buttonCheck, sizeof(buttonCheck));
+  
+}
+```
+
+## Receiver code
+
+```cpp
+/*
+ * This is a 1 channel nrf24l01 transmitter and receiver code.
+ * There is a single output(led control) in the receiver which can controlled with the pushbutton in transmitter;
+ * 
+ * To know more refer the below links:
+ *  https://youtu.be/UoeU79G09Dk
+ *  https://dhirajkushwaha.com/elekkrypt
+ *  
+ */
+
+
+#include <SPI.h>
+#include <RF24.h>
+#include <nRF24L01.h>
+
+RF24 radio(7,8); // declaring CE and CSN pins
+const byte address[] = "node1";
+
+bool buttonState = 0; // stores the received data of state of button after
+
+void setup() {
+  radio.begin(); // initializes the operations of the chip
+  radio.openReadingPipe(0, address);
+  radio.setPALevel(RF24_PA_MIN);
+  radio.startListening();
+  
+  pinMode(3, OUTPUT); // declares LEDpin as an output
+  
+}
+
+
+void loop() {
+  while(radio.available()){  
+    radio.read(&buttonState, sizeof(buttonState));
+    digitalWrite(3, buttonState);
+  }
+
+}
+```
