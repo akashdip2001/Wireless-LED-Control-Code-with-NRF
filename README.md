@@ -162,6 +162,8 @@ void loop() {
 
 </details>
 
+https://github.com/user-attachments/assets/263dbe1e-9529-4ec1-8dab-7897d9b616dc
+
 ## Transmitter code
 
 ```cpp
@@ -197,12 +199,7 @@ void loop() {
 ```cpp
 /*
  * This is a 1 channel nrf24l01 transmitter and receiver code.
- * There is a single output(led control) in the receiver which can controlled with the pushbutton in transmitter;
- * 
- * To know more refer the below links:
- *  https://youtu.be/UoeU79G09Dk
- *  https://dhirajkushwaha.com/elekkrypt
- *  
+ * There is a single output(led control) in the receiver which can controlled with the pushbutton in transmitter; 
  */
 
 
