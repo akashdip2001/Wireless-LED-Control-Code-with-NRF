@@ -1,11 +1,6 @@
 /*
  * This is a 1 channel nrf24l01 transmitter and receiver code.
  * There is a single input(push button) in the transmitter which can control the led in receiver;
- * 
- * To know more refer the below links:
- *  https://youtu.be/UoeU79G09Dk
- *  https://dhirajkushwaha.com/elekkrypt
- *  
  */
 
 
