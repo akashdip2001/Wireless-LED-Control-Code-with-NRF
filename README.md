@@ -1,11 +1,11 @@
 # Wireless LED Control Code with NRF
 
+![NRF](https://github.com/user-attachments/assets/f48cd1ff-5484-4823-a58d-ae16e4f568ae)
+
 <details>
   <summary style="opacity: 0.85;"><b>Old Code + connections + ✅ ARDUINO IDE setup</b></summary><br>
   
 Here’s the **modified code** where pressing a switch on the **transmitter side** will make the **onboard LED (pin 13) of the receiver blink**.
-
-![NRF](https://github.com/user-attachments/assets/f48cd1ff-5484-4823-a58d-ae16e4f568ae)
 
 The image contains the following components:
 
